@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primer Parcial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="data">
+    <h1>Lista de Datos</h1>
+    <div class="controles">
+      <label for="filtro">Filtrar por:</label>
+      <select id="filtro">
+          <option value="persona">Persona</option>
+          <option value="ciudadano"selected>Ciudadano</option>
+          <option value="extranjero"selected>Extranjero</option>
+      </select>
+      <div id="calcularPromedioContainer">
+        <label for="calcularPromedio">Calcular edad promedio:</label>
+        <button id="btnCalcularPromedio" style="margin-right: 10px;">Calcular</button>
+        <span id="resultadoPromedioPersonas" style="color: green;"></span>
+      </div>
+      <div id="checks">
+        <input type="checkbox" id="chkId" checked> <label for="chkId">ID</label>
+        <input type="checkbox" id="chkNombre" checked> <label for="chkNombre">Nombre</label>
+        <input type="checkbox" id="chkApellido" checked> <label for="chkApellido">Apellido</label>
+        <input type="checkbox" id="chkFechaNacimiento" checked> <label for="chkFechaNacimiento">Fecha de Nacimiento</label>
+      </div>
+    </div>
+    <table>
+        <thead>
+            <tr id="header">
+            </tr>
+        </thead>
+        <tbody id="datatable">
+        </tbody>
+    </table>
+    <input id="AddButton" type="button" value="Agregar Fila">
+  </div>
+
+  <input type="hidden" name="id" id="id">
+  <div class="abm hidden" id="extranjero">
+    <h2>Formulario ABM Extranjero</h2>
+    <form id="formularioExtranjero">
+      <div class="formItem">
+        <label for="idExtranjero">ID:</label>
+        <input type="number" id="idExtranjero" required>
+      </div>
+      <div class="formItem">
+        <label for="nombreExtranjero">Nombre:</label>
+        <input type="text" id="nombreExtranjero" required>
+      </div>
+      <div class="formItem">
+        <label for="apellidoExtranjero">Apellido:</label>
+        <input type="text" id="apellidoExtranjero" required>
+      </div>
+      <div class="formItem">
+        <label for="fechaNacimientoExtranjero">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimientoExtranjero" required>
+      </div>
+      <div class="formItem">
+        <label for="paisOrigenExtranjero">Pais de origen:</label>
+        <input type="text" id="paisOrigenExtranjero" required>
+      </div>
+    </form>
+    <div class="controles">
+      <button id="AddButtonExtranjero">Agregar</button>
+      <button id="DeleteButtonExtranjero">Eliminar</button>
+      <button id="CancelButtonExtranjero">Cancelar</button>
+    </div>
+    <div id="errorMensajeExtranjero" style="color: red;"></div> 
+  </div>
+
+  <div class="abm hidden" id="ciudadano">
+    <h2>Formulario ABM Ciudadano</h2>
+    <form id="formularioCiudadano">
+      <div class="formItem">
+        <label for="idCiudadano">ID:</label>
+        <input type="number" id="idCiudadano" required>
+      </div>
+      <div class="formItem">
+        <label for="nombreCiudadano">Nombre:</label>
+        <input type="text" id="nombreCiudadano" required>
+      </div>
+      <div class="formItem">
+        <label for="apellidoCiudadano">Apellido:</label>
+        <input type="text" id="apellidoCiudadano" required>
+      </div>
+      <div class="formItem">
+        <label for="fechaNacimientoCiudadano">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimientoCiudadano" required>
+      </div>
+      <div class="formItem">
+        <label for="dniCiudadano">DNI:</label>
+        <input type="number" id="dniCiudadano" required>
+      </div>
+    </form>
+    <div class="controles">
+      <button id="AddButtonCiudadano">Agregar</button>
+      <button id="DeleteButtonCiudadano">Eliminar</button>
+      <button id="CancelarButtonCiudadano">Cancelar</button>
+    </div>
+    <div id="errorMensajeCiudadano" style="color: red;"></div>
+  </div>
+
+  <div class="abm hidden" id="persona">
+    <h2>Formulario ABM Persona</h2>
+    <form id="formularioPersona">
+      <div class="formItem">
+        <label for="idPersona">ID:</label>
+        <input type="number" id="idPersona" required>
+      </div>
+      <div class="formItem">
+        <label for="nombrePersona">Nombre:</label>
+        <input type="text" id="nombrePersona" required>
+      </div>
+      <div class="formItem">
+        <label for="apellidoPersona">Apellido:</label>
+        <input type="number" id="apellidoPersona" required>
+      </div>
+      <div class="formItem">
+        <label for="fechaNacimientoPersona">Fecha de nacimiento:</label>
+        <input type="number" id="fechaNacimientoPersona" required>
+      </div>
+    </form>
+    <div class="controles">
+      <button id="AddButtonPersona">Agregar</button>
+      <button id="DeleteButtonPersona">Eliminar</button>
+      <button id="CancelButtonPersona">Cancelar</button>
+    </div>
+    <div id="errorMensajePersona" style="color: red;"></div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

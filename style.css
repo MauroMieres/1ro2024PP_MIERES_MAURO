@@ -1,0 +1,66 @@
+
+/* Estilos para el contenedor del formulario */
+.data, .abm, form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Estilos para el botón de agregar */
+#AddButton {
+  margin-top: 20px;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#AddButton:hover {
+  background-color: #333333;
+}
+
+/* Estilos para los elementos del formulario */
+.formItem {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la tabla */
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+th, td {
+  border: 1px solid #666666;
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #4a4a4a;
+  color: #ffffff;
+}
+
+/* Estilos para las filas de la tabla cuando se hace hover */
+tr:hover {
+  background-color: #dddddd;
+}
+
+/* Estilos para los controles */
+.controles {
+  margin-bottom: 20px;
+}
+
+/* Estilo para elementos ocultos */
+.hidden {
+  display: none;
+}
+
+/* Estilos para los inputs con errores */
+.error-input {
+  border: 1px solid red;
+}
